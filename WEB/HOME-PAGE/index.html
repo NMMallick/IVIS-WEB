@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>Responsive Sidebar | IVIS Web Rework</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Boxicons CDN Link -->
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+
+    <body>
+        <div class="sidebar">
+            <div class="logo_content">
+                <div class="logo">
+                    <i class='bx bxl-c-plus-plus'></i>
+                    <div class="logo_name">
+                        <strong>IVIS</strong>
+                        <br>Laboratory
+                    </div>
+                </div>
+                <i class='bx bx-menu' id="btn"></i>
+            </div>
+            <ul class="nav_list">
+                <!-- <li>
+                        <i class='bx bx-search' ></i>
+                        <input type="text" placeholder="Search..." >
+                    <span class="tooltip">Search</span>
+                </li> -->
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-home'></i>
+                        <span class="links_name">Home</span>
+                    </a>
+                    <span class="tooltip">Home</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-line-chart' ></i>
+                        <span class="links_name">Projects</span>
+                    </a>
+                    <span class="tooltip">Projects</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-world'></i>
+                        <span class="links_name">Laboratories</span>
+                    </a>
+                    <span class="tooltip">Laboratories</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-folder' ></i>
+                        <span class="links_name">Archives</span>
+                    </a>
+                    <span class="tooltip">Archives</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-link' ></i>
+                        <span class="links_name">Links</span>
+                    </a>
+                    <span class="tooltip">Links</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-log-in' ></i>
+                        <span class="links_name">Login</span>
+                    </a>
+                    <span class="tooltip">Login</span>
+                </li>
+            </ul>
+
+            <div class="profile_content">
+                <div class="profile">
+                    <div class="profile_details">
+                        <div class="name_job">
+                            <div class="name">University of Pittsburgh</div>
+                            <!-- <div class="job">Computer Specialist</div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- END OF SIDE BAR -->
+
+        <div class="home_content">
+            <div class="text">Home Content</div>
+        </div>
+
+    <script>
+        let btn = document.querySelector("#btn"); 
+        let sidebar = document.querySelector(".sidebar"); 
+        let searchBtn = document.querySelector(".bx-search"); 
+
+        btn.onclick = function() {
+            sidebar.classList.toggle("active"); 
+
+            if(sidebar.classList.contains("active")) { 
+                btn.classList.replace("bx-menu", "bx-chevron-left");
+            } else { 
+                btn.classList.replace("bx-chevron-left", "bx-menu")
+            }
+        }
+        searchBtn.onclick = function() {
+            sidebar.classList.toggle("active"); 
+        }
+    </script>
+    </body>
+</html>
